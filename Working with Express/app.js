@@ -8,7 +8,7 @@ const app = express();
 
 app.use(bodyParse.urlencoded({ extended: false }));
 
-app.use(adminRoute);
+app.use('/admin', adminRoute);
 app.use(shopRoute);
 
 // '/' is the default route if not specified
