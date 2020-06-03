@@ -1,1 +1,11 @@
-[{"title":"Book"},{"title":"dsafsd"}]
+[
+    {
+        "title": "First Book"
+    },
+    {
+        "title": "Second Book"
+    },
+    {
+        "title": "Third Book"
+    }
+]
