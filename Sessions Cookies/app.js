@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use((req, res, next) => {
-  User.findById('5bab316ce0a7c75f783cb8a8')
+  User.findById('5ed9e5b1b414604bbd08843b')
     .then(user => {
       req.user = user;
       next();
@@ -36,7 +36,11 @@ app.use(errorController.get404);
 
 mongoose
   .connect(
-    'mongodb+srv://maximilian:9u4biljMQc4jjqbe@cluster0-ntrwp.mongodb.net/shop?retryWrites=true'
+    'mongodb+srv://nodeapp:kcDnrb7jT2AubdVb@nodecompleteguide-rozde.mongodb.net/shop?retryWrites=true&w=majority',
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    }
   )
   .then(result => {
     User.findOne().then(user => {
@@ -51,6 +55,7 @@ mongoose
         user.save();
       }
     });
+    console.log('Server Runing at Port 3000');
     app.listen(3000);
   })
   .catch(err => {
