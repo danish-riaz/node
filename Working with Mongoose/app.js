@@ -34,7 +34,7 @@ app.use(errorController.get404);
 
 mongoose
   .connect(
-    'mongodb+srv://nodeapp:QsU2qJY7weWy5C7X@nodecompleteguide-rozde.mongodb.net/shop?retryWrites=true&w=majority',
+    'mongodb+srv://nodeapp:gPeGpg9oiyejoPHA@nodecompleteguide-rozde.mongodb.net/shop?retryWrites=true&w=majority',
     {
       useNewUrlParser: true,
       useUnifiedTopology: true
