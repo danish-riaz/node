@@ -9,8 +9,8 @@ const MongoDBStore = require('connect-mongodb-session')(session);
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 
-const MONGODB_URI =
-  'mongodb+srv://maximilian:9u4biljMQc4jjqbe@cluster0-ntrwp.mongodb.net/shop';
+const MONGODB_URI = 'mongodb+srv://nodeapp:oJGOQJLwMbKlIM5Y@nodecompleteguide-rozde.mongodb.net/shop';
+
 
 const app = express();
 const store = new MongoDBStore({
@@ -55,20 +55,14 @@ app.use(authRoutes);
 app.use(errorController.get404);
 
 mongoose
-  .connect(MONGODB_URI)
+  .connect(
+    MONGODB_URI,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    })
   .then(result => {
-    User.findOne().then(user => {
-      if (!user) {
-        const user = new User({
-          name: 'Max',
-          email: 'max@test.com',
-          cart: {
-            items: []
-          }
-        });
-        user.save();
-      }
-    });
+    console.log('Server Running at port 3000');
     app.listen(3000);
   })
   .catch(err => {
