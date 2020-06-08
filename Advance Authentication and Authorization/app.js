@@ -66,10 +66,11 @@ app.use(authRoutes);
 app.use(errorController.get404);
 
 mongoose
-  .connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
+  .connect(MONGODB_URI,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    })
   .then(result => {
     console.log('Server Running at port 3000');
     app.listen(3000);
