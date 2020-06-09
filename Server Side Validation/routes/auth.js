@@ -23,7 +23,13 @@ router.post('/signup',
         }),
     body('password', 'Please enter a valid password with length 5 and no alphanumeric characters.')
         .isLength({ min: 5 })
-        .isAlphanumeric()
+        .isAlphanumeric(),
+    body('confirmpassword').custom((value, { req }) => {
+        if (value !== req.body.password) {
+            throw new Error('Passwords should match.')
+        }
+        return true;
+    })
     ]
     , authController.postSignup);
 
