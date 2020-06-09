@@ -11,7 +11,17 @@ router.get('/signup', authController.getSignup);
 
 router.post('/login', authController.postLogin);
 
-router.post('/signup', check('email').isEmail().withMessage('Please Enter a Valid email.'), authController.postSignup);
+router.post('/signup',
+    check('email')
+        .isEmail()
+        .withMessage('Please Enter a Valid email.')
+        .custom((value, { req }) => {
+            if (value == 'test11@test.com') {
+                throw new Error('Forbbiden Email');
+            }
+            return true;
+        })
+    , authController.postSignup);
 
 router.post('/logout', authController.postLogout);
 
