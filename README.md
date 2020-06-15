@@ -35,7 +35,7 @@ Modules that were not added to git<br/>
 
 For REST-APIs and GraphQL APIs i have seperate repo.<br/>
 
-REST-APIs = //ADD LINK HERE<br/>
+REST-APIs = https://github.com/danish-riaz/rest-api-with-node-js
 GraphQL - //ADD LINK HERE<br/>
 
 
