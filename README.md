@@ -3,7 +3,7 @@ Node.js - A complete Developer Guide (Udemy)<br/>
 Udemy Course Link - https://www.udemy.com/course/nodejs-the-complete-guide/ <br/>
 
 ## Packages
-Run ``` npm install ``` or ```yarn install ``` (for installing all third party packages) before running the npm start or node app.js.<br/>
+Run ``` npm install ``` or ```yarn install ``` (for installing all third party packages) before running the ``` npm start ``` or ``` node app.js ```.<br/>
 
 ## NOTE
 I have used my database credentails and removed the clusters after completing course.So Please make sure you replace mine with yours.<br/>
