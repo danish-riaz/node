@@ -1,14 +1,14 @@
 # Node
 Node.js - A complete Developer Guide (Udemy)<br/>
-Udemy Link - https://www.udemy.com/course/nodejs-the-complete-guide/ <br/>
+Udemy Course Link - https://www.udemy.com/course/nodejs-the-complete-guide/ <br/>
 
-# Packages
-Run "npm install" (for installing all third party packages) before running the npm start or node app.js.<br/>
+## Packages
+Run ``` npm install ``` or ```yarn install ``` (for installing all third party packages) before running the npm start or node app.js.<br/>
 
-# NOTE
+## NOTE
 I have used my database credentails and removed the clusters after completing course.So Please make sure you replace mine with yours.<br/>
 
-# Hierarchy
+## Hierarchy
 I have skiped some optional or easy modules.<br/>
 
 Course Hierarchy<br/>
@@ -31,12 +31,12 @@ Modules that were not added to git<br/>
 02.Error Handling<br/>
 03.File Upload  Download<br/>
 04.Understanding Async Requests<br/>
-05.Adding Payments<br/>
+05.Adding Payments (with stripe)<br/>
 
-For REST-APIs and GraphQL APIs i have seperate repo.<br/>
+For REST-APIs and GraphQL APIs i have seperate repos.<br/>
 
-REST-APIs = https://github.com/danish-riaz/rest-api-with-node-js <br />
-GraphQL - //ADD LINK HERE<br/>
+REST-API - https://github.com/danish-riaz/rest-api-with-node-js <br />
+GraphQL API- https://github.com/danish-riaz/graphql-api-with-nodejs<br/>
 
 
 
